@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cafe</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#005A9C",
+              secondary: "#FF7A00",
+              "background-light": "#F2F2F7",
+              "background-dark": "#1C1C1E",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#2C2C2E",
+              "text-light": "#1C1C1E",
+              "text-dark": "#F2F2F7",
+              "text-muted-light": "#636366",
+              "text-muted-dark": "#AEAEB2",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-size: 24px;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display bg-background-light dark:bg-background-dark">
+    <div
+      class="relative flex h-[100dvh] w-full flex-col group/design-root overflow-hidden"
+    >
+      <header
+        class="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-background-light/80 dark:from-background-dark/80 via-background-light/50 dark:via-background-dark/50 to-transparent backdrop-blur-sm p-4 pt-6 space-y-3"
+      >
+        <div class="flex items-center gap-2">
+          <button
+            class="flex items-center justify-center size-12 shrink-0 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark shadow-md"
+          >
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+          <label class="flex flex-col h-12 w-full shadow-md rounded-full">
+            <div class="flex w-full flex-1 items-stretch rounded-full h-full">
+              <div
+                class="text-primary flex items-center justify-center pl-4 rounded-l-full bg-surface-light dark:bg-surface-dark"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-surface-light dark:bg-surface-dark h-full placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark px-2 text-base font-normal leading-normal"
+                placeholder="Найти кафе, кухню, блюдо"
+                value=""
+              />
+            </div>
+          </label>
+          <button
+            class="flex items-center justify-center size-12 shrink-0 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark shadow-md"
+          >
+            <span class="material-symbols-outlined">tune</span>
+          </button>
+        </div>
+        <div
+          class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4"
+          style="scrollbar-width: none; -ms-overflow-style: none"
+        >
+          <style>
+            .overflow-x-auto::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-4 pr-4 text-white shadow"
+            style="background-color: rgb(29 185 84 / var(--tw-text-opacity, 1))"
+          >
+            <span class="material-symbols-outlined !text-xl">restaurant</span>
+            <p class="text-sm font-medium leading-normal">Кафе</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark pl-4 pr-4 shadow"
+          >
+            <span class="material-symbols-outlined !text-xl">star</span>
+            <p class="text-sm font-medium leading-normal">Рейтинг 4.5+</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark pl-4 pr-4 shadow"
+          >
+            <span class="material-symbols-outlined !text-xl">wifi</span>
+            <p class="text-sm font-medium leading-normal">Wi-Fi</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark pl-4 pr-4 shadow"
+          >
+            <span class="material-symbols-outlined !text-xl">payments</span>
+            <p class="text-sm font-medium leading-normal">Средний чек</p>
+          </button>
+          <button
+            class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark pl-4 pr-4 shadow"
+          >
+            <span class="material-symbols-outlined !text-xl">schedule</span>
+            <p class="text-sm font-medium leading-normal">Открыто сейчас</p>
+          </button>
+        </div>
+      </header>
+      <main class="flex-1 flex flex-col justify-between">
+        <div class="absolute inset-0 z-0">
+          <img
+            class="h-full w-full object-cover"
+            data-alt="A bird's eye view of a city map with streets and buildings."
+            data-location="Anytown"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9b4VywW0r1u-jVscemlsTh4fBC_wBL1k5AFpgFRKDQbtll20PJwTxaW6ifkZLiKQdB4_4e8Gu-z5IexY541vOX8kAOeP9_4DwFMYlaPXwxQOc3p9zYfO-OzFsx3LEMAm5RZNE_WV2BQZdWErDek0Sw-Hs1vND2ZlyqvK10FFMYdHAKrbXTpLFRNa-ibEhiOiLVddW3-Bqgw2KxbKy0ACmSlO6D3j1eTowfKWF9ZtZ4otDBVE_Vr9-hrdmd62Pbk01hxPNRkq4xnw"
+          />
+        </div>
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <div
+            class="absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              class="relative pointer-events-auto cursor-pointer flex flex-col items-center group"
+            >
+              <div
+                class="flex items-center justify-center h-8 bg-primary text-white rounded-full shadow-lg border-2 border-surface-light dark:border-surface-dark px-3"
+                style="
+                  background-color: rgb(29 185 84 / var(--tw-text-opacity, 1));
+                "
+              >
+                <span
+                  class="material-symbols-outlined !text-base mr-1"
+                  style="font-variation-settings: 'FILL' 1"
+                  >star</span
+                >
+                <span class="text-sm font-bold">4.9</span>
+              </div>
+              <div
+                class="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-primary -mt-px"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="absolute top-[60%] left-[25%] -translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              class="relative pointer-events-auto cursor-pointer flex flex-col items-center group"
+            >
+              <div
+                class="flex items-center justify-center size-8 bg-surface-light dark:bg-surface-dark text-primary rounded-full shadow-lg"
+              >
+                <span class="material-symbols-outlined !text-xl"
+                  >restaurant</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute top-[55%] left-[70%] -translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              class="relative pointer-events-auto cursor-pointer flex flex-col items-center group"
+            >
+              <div
+                class="absolute bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap px-3 py-1.5 text-sm font-semibold text-white bg-text-light dark:bg-surface-dark rounded-lg shadow-lg"
+              >
+                Coffee Bean
+              </div>
+              <div
+                class="flex items-center justify-center size-8 bg-surface-light dark:bg-surface-dark text-primary rounded-full shadow-lg"
+              >
+                <span class="material-symbols-outlined !text-xl"
+                  >local_cafe</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute z-10 right-4 bottom-32 flex flex-col items-end gap-3"
+        >
+          <div
+            class="flex flex-col gap-px shadow-lg rounded-xl overflow-hidden"
+          >
+            <button
+              class="flex size-12 items-center justify-center bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark"
+            >
+              <span class="material-symbols-outlined">add</span>
+            </button>
+            <button
+              class="flex size-12 items-center justify-center bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark"
+            >
+              <span class="material-symbols-outlined">remove</span>
+            </button>
+          </div>
+          <button
+            class="flex size-14 items-center justify-center rounded-xl bg-surface-light dark:bg-surface-dark text-primary shadow-lg"
+          >
+            <span class="material-symbols-outlined !text-3xl">my_location</span>
+          </button>
+        </div>
+        <div class="relative z-20 mt-auto p-3">
+          <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-2xl p-4 flex items-center justify-between gap-4"
+          >
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg font-bold text-text-light dark:text-text-dark">
+                Уютное кафе
+              </h3>
+              <div
+                class="flex items-center gap-2 text-sm text-text-muted-light dark:text-text-muted-dark"
+              >
+                <div class="flex items-center gap-1">
+                  <span
+                    class="material-symbols-outlined text-yellow-500 !text-base"
+                    style="font-variation-settings: 'FILL' 1"
+                    >star</span
+                  >
+                  <span>4.9</span>
+                </div>
+                <span>•</span>
+                <span>1.2 км</span>
+              </div>
+            </div>
+            <button
+              class="flex items-center justify-center size-12 shrink-0 rounded-full bg-primary text-white"
+              style="
+                background-color: rgb(29 185 84 / var(--tw-text-opacity, 1));
+                padding-left: 2px;
+                padding-top: 2px;
+              "
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

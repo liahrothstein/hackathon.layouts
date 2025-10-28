@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Service</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3498DB",
+              accent: "#2ECC71",
+              "background-light": "#F2F3F5",
+              "background-dark": "#1a2632",
+              "card-light": "#FFFFFF",
+              "card-dark": "#2C3E50",
+              "text-light": "#34495E",
+              "text-dark": "#E0E6EB",
+              "subtle-light": "#7f8c8d",
+              "subtle-dark": "#95a5a6",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="relative min-h-screen w-full flex-col pb-28">
+      <!-- Top App Bar -->
+      <header
+        class="sticky top-0 z-20 flex h-16 items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 justify-between"
+      >
+        <button
+          class="flex size-10 items-center justify-center rounded-full text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <h1 class="text-lg font-bold text-text-light dark:text-text-dark">
+          СТО Белавтотехком
+        </h1>
+        <button
+          class="flex size-10 items-center justify-center rounded-full text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined">share</span>
+        </button>
+      </header>
+      <main>
+        <!-- Hero Image -->
+        <div class="px-4">
+          <div
+            class="w-full h-52 bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl"
+            data-alt="Photo of the AutoMaster service station interior"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxeGzqksJKn5BmlpXNye2HgE3nZ8DKJ3yNcHwO8YjPIguJ9p8pAWeZsmOUybHaz0xnqKGYzeruaH5JzSvYW0F5kl5RwLyWLMXdic3Seh1UmbsKo4WiDrISpqFKO-9j0FyNq0a59eo6lAhxSOJR2MV3gaehXwpKqGdUtQv2f6mFxJFWu1AyWkuoFO0PIZuTD0hBko5ws-rj3cTSkPzPhCWwGRLWGBZprpqVsIbc3pBKIbPX11HhCr1DTgO5xkUQxnOYeur-WH_uQPc');
+            "
+          ></div>
+        </div>
+        <!-- Header Block -->
+        <div class="px-4 pt-5 pb-3">
+          <h2
+            class="text-2xl font-bold tracking-tight text-text-light dark:text-text-dark"
+          >
+            СТО Белавтотехком
+          </h2>
+          <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">
+            Мультибрендовый сервис
+          </p>
+          <div class="flex items-center gap-3 mt-3">
+            <div class="flex items-center gap-1">
+              <span
+                class="material-symbols-outlined text-yellow-500 text-lg"
+                style="font-variation-settings: 'FILL' 1"
+                >star</span
+              >
+              <p class="text-sm font-bold text-text-light dark:text-text-dark">
+                4.8
+                <span
+                  class="font-normal text-subtle-light dark:text-subtle-dark"
+                  >(124 отзыва)</span
+                >
+              </p>
+            </div>
+            <div class="h-4 w-px bg-gray-300 dark:bg-gray-600"></div>
+            <div class="flex items-center gap-1.5 text-accent">
+              <span class="material-symbols-outlined text-base">verified</span>
+              <p class="text-sm font-semibold">Проверенный партнер</p>
+            </div>
+          </div>
+        </div>
+        <!-- Information List -->
+        <div class="flex flex-col gap-3 px-4 py-4">
+          <div class="flex items-center gap-4">
+            <div
+              class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary"
+            >
+              <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <div>
+              <p class="font-semibold text-text-light dark:text-text-dark">
+                ул. Гаражная, д. 15, Минск
+              </p>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark">
+                1.2 км от вас
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary"
+            >
+              <span class="material-symbols-outlined">schedule</span>
+            </div>
+            <div>
+              <p class="font-semibold text-accent">Открыто</p>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark">
+                Закроется в 21:00
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary"
+            >
+              <span class="material-symbols-outlined">call</span>
+            </div>
+            <div>
+              <p class="font-semibold text-text-light dark:text-text-dark">
+                +375 (44) 123-45-67
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Map View -->
+        <div class="px-4 py-2">
+          <img src="./assets/map.png" style="width: 393px" alt="" />
+        </div>
+        <!-- Tabs -->
+        <div class="px-4 pt-5 pb-2">
+          <div class="flex gap-2 p-1 rounded-full bg-gray-200 dark:bg-gray-700">
+            <button
+              class="flex-1 rounded-full py-2 text-sm font-semibold bg-card-light dark:bg-card-dark text-primary"
+            >
+              Услуги
+            </button>
+            <button
+              class="flex-1 rounded-full py-2 text-sm font-semibold text-subtle-light dark:text-subtle-dark"
+            >
+              Отзывы
+            </button>
+            <button
+              class="flex-1 rounded-full py-2 text-sm font-semibold text-subtle-light dark:text-subtle-dark"
+            >
+              Обзор
+            </button>
+          </div>
+        </div>
+        <!-- Services List (Accordion) -->
+        <div class="flex flex-col gap-3 px-4 py-4">
+          <div
+            class="rounded-xl bg-card-light dark:bg-card-dark overflow-hidden"
+          >
+            <button
+              class="flex w-full items-center justify-between p-4 text-left"
+            >
+              <h3 class="font-bold text-text-light dark:text-text-dark">
+                Диагностика
+              </h3>
+              <span
+                class="material-symbols-outlined text-subtle-light dark:text-subtle-dark transition-transform transform"
+                >expand_more</span
+              >
+            </button>
+            <div class="px-4 pb-4">
+              <div
+                class="flex justify-between py-2 border-b border-gray-100 dark:border-gray-700"
+              >
+                <span class="text-text-light dark:text-text-dark"
+                  >Комплексная диагностика</span
+                >
+                <span class="font-semibold text-text-light dark:text-text-dark"
+                  >от 64.99 p.</span
+                >
+              </div>
+              <div class="flex justify-between py-2">
+                <span class="text-text-light dark:text-text-dark"
+                  >Диагностика подвески</span
+                >
+                <span class="font-semibold text-text-light dark:text-text-dark"
+                  >от 33.99 p.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl bg-card-light dark:bg-card-dark overflow-hidden"
+          >
+            <button
+              class="flex w-full items-center justify-between p-4 text-left"
+            >
+              <h3 class="font-bold text-text-light dark:text-text-dark">
+                Ремонт двигателя
+              </h3>
+              <span
+                class="material-symbols-outlined text-subtle-light dark:text-subtle-dark transition-transform transform"
+                >expand_more</span
+              >
+            </button>
+          </div>
+          <div
+            class="rounded-xl bg-card-light dark:bg-card-dark overflow-hidden"
+          >
+            <button
+              class="flex w-full items-center justify-between p-4 text-left"
+            >
+              <h3 class="font-bold text-text-light dark:text-text-dark">
+                Шиномонтаж
+              </h3>
+              <span
+                class="material-symbols-outlined text-subtle-light dark:text-subtle-dark transition-transform transform"
+                >expand_more</span
+              >
+            </button>
+          </div>
+        </div>
+      </main>
+      <!-- Floating Action Bar -->
+      <footer
+        class="fixed bottom-0 left-0 right-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="flex items-center gap-3">
+          <button
+            style="background-color: rgb(29 185 84 / var(--tw-bg-opacity, 1))"
+            class="flex h-12 flex-1 items-center justify-center rounded-xl bg-primary px-4 text-base font-bold text-white"
+          >
+            Записаться
+          </button>
+          <button
+            class="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-300 dark:border-gray-600 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark"
+          >
+            <span class="material-symbols-outlined">route</span>
+          </button>
+          <button
+            class="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-300 dark:border-gray-600 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark"
+          >
+            <span class="material-symbols-outlined">call</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

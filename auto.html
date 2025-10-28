@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Auto</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .material-symbols-outlined.fill {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1db954",
+              accent: "#ffd600",
+              "background-light": "#f5f5f7",
+              "background-dark": "#121212",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e1e1e",
+              "text-primary-light": "#212121",
+              "text-primary-dark": "#e0e0e0",
+              "text-secondary-light": "#757575",
+              "text-secondary-dark": "#bdbdbd",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: 100dvh;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark"
+  >
+    <div class="flex min-h-screen w-full flex-col">
+      <header
+        class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 p-4 backdrop-blur-sm dark:bg-background-dark/80"
+      >
+        <button class="flex h-10 w-10 items-center justify-center">
+          <span class="material-symbols-outlined">arrow_back_ios_new</span>
+        </button>
+        <h1 class="text-lg font-bold">Мой авто</h1>
+        <button class="flex h-10 w-10 items-center justify-center">
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+      </header>
+      <main class="flex-1 space-y-6 p-4">
+        <section
+          class="relative overflow-hidden rounded-2xl bg-surface-light p-4 shadow-sm dark:bg-surface-dark"
+        >
+          <div class="relative z-10">
+            <h2 class="text-2xl font-bold">BMW XM</h2>
+            <p
+              class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+            >
+              XM, 2023
+            </p>
+            <div class="mt-4 flex items-center space-x-4">
+              <div class="flex flex-1 items-center gap-2">
+                <span class="material-symbols-outlined text-green-500"
+                  >local_gas_station</span
+                >
+                <div class="w-full">
+                  <div class="h-1.5 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <div class="h-1.5 w-3/4 rounded-full bg-green-500"></div>
+                  </div>
+                </div>
+                <span class="text-sm font-semibold">75%</span>
+              </div>
+              <div class="flex flex-1 items-center gap-2">
+                <span class="material-symbols-outlined text-blue-500 fill"
+                  >battery_full</span
+                >
+                <div class="w-full">
+                  <div class="h-1.5 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <div class="h-1.5 w-[95%] rounded-full bg-blue-500"></div>
+                  </div>
+                </div>
+                <span class="text-sm font-semibold">95%</span>
+              </div>
+            </div>
+          </div>
+          <img
+            alt="BMW X5 Photo"
+            class="absolute right-0 top-0 h-full w-2/3 object-cover object-right opacity-20 dark:opacity-10 sm:w-1/2"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAEa1l5i50vSjVEQgEmzCvqyCzmzKR9YWYmqcrgT1ygHNfwFCx3IgZ_2BuZO7Ix6fMlG6MznO5JlOWetAd4c6RADe9PtoZf-xxuQtP2Rpgwgw7pUK81wpRdAmbOJTwDXfRE-XEncI2FvMZ1tpJuzcMfrCAAkyN7OC9H8pCdbFJ7ayXnqngDXOEneTJfg1G5HYcSKTaxdSDBQHVyxW5z70yqTX0rhQfBW_z77e-rn-MST3TLKicELGLL3VnQ4DnDnUIGbWrIKngMY"
+          />
+        </section>
+        <section class="grid grid-cols-2 gap-4">
+          <button
+            class="flex flex-col items-center justify-center gap-2 rounded-xl bg-primary/10 p-4 text-primary dark:bg-primary/20"
+          >
+            <span class="material-symbols-outlined text-3xl"
+              >calendar_add_on</span
+            >
+            <span class="text-sm font-semibold">Запись на СТО</span>
+          </button>
+          <button
+            class="flex flex-col items-center justify-center gap-2 rounded-xl bg-accent/10 p-4 text-yellow-600 dark:bg-accent/20 dark:text-accent"
+          >
+            <span class="material-symbols-outlined text-3xl"
+              >shopping_cart</span
+            >
+            <span class="text-sm font-semibold">Заказать запчасти</span>
+          </button>
+        </section>
+        <section
+          class="rounded-xl bg-surface-light p-4 shadow-sm dark:bg-surface-dark"
+        >
+          <h2 class="mb-4 text-base font-bold">Техническое обслуживание</h2>
+          <div class="relative pl-5">
+            <div
+              class="absolute left-7 top-1 h-full w-0.5 bg-gray-200 dark:bg-gray-700"
+            ></div>
+            <div class="relative mb-6 flex items-start gap-4">
+              <div
+                class="z-10 flex h-6 w-6 items-center justify-center rounded-full bg-green-500"
+              >
+                <span class="material-symbols-outlined text-base text-white"
+                  >check</span
+                >
+              </div>
+              <div class="mt-[-2px] flex-1">
+                <p class="font-medium">Замена масла и фильтров</p>
+                <p
+                  class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+                >
+                  25.03.2024
+                </p>
+              </div>
+            </div>
+            <div class="relative flex items-start gap-4">
+              <div
+                class="z-10 flex h-6 w-6 items-center justify-center rounded-full border-2 border-primary bg-background-light dark:bg-background-dark"
+              >
+                <span class="material-symbols-outlined text-base text-primary"
+                  >schedule</span
+                >
+              </div>
+              <div class="mt-[-2px] flex-1">
+                <p class="font-medium text-primary">Плановое ТО-5</p>
+                <p
+                  class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+                >
+                  ~ 25.09.2024 (через 5 000 км)
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="rounded-xl bg-surface-light p-4 shadow-sm dark:bg-surface-dark"
+        >
+          <h2 class="mb-4 text-base font-bold">Статистика</h2>
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Расход топлива</h3>
+              <div
+                class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+              >
+                <span
+                  class="font-bold text-text-primary-light dark:text-text-primary-dark"
+                  >12.5</span
+                >
+                л/100км
+              </div>
+            </div>
+            <div
+              class="mt-3 h-24 w-full rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-sm text-text-secondary-light dark:text-text-secondary-dark"
+            >
+              <span class="material-symbols-outlined mr-2">show_chart</span>
+              График расхода
+            </div>
+          </div>
+          <div class="mt-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Пробег</h3>
+              <div
+                class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+              >
+                <span
+                  class="font-bold text-text-primary-light dark:text-text-primary-dark"
+                  >50 120</span
+                >
+                км
+              </div>
+            </div>
+            <div
+              class="mt-3 h-24 w-full rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-sm text-text-secondary-light dark:text-text-secondary-dark"
+            >
+              <span class="material-symbols-outlined mr-2">timeline</span>
+              График пробега
+            </div>
+          </div>
+        </section>
+        <section
+          class="rounded-xl bg-surface-light p-4 shadow-sm dark:bg-surface-dark"
+        >
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-bold">Напоминания</h2>
+            <button class="flex h-8 w-8 items-center justify-center">
+              <span
+                class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark"
+                >add</span
+              >
+            </button>
+          </div>
+          <div class="mt-4 space-y-3">
+            <div
+              class="flex items-center gap-4 rounded-lg bg-orange-100/50 p-3 dark:bg-orange-900/20"
+            >
+              <span class="material-symbols-outlined text-orange-500"
+                >shield</span
+              >
+              <div class="flex-1">
+                <p class="font-medium">Страховка ОСАГО</p>
+                <p class="text-sm text-orange-600 dark:text-orange-400">
+                  Истекает 15.08.2024
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 rounded-lg bg-blue-100/50 p-3 dark:bg-blue-900/20"
+            >
+              <span class="material-symbols-outlined text-blue-500"
+                >article</span
+              >
+              <div class="flex-1">
+                <p class="font-medium">Техосмотр</p>
+                <p
+                  class="text-sm text-text-secondary-light dark:text-text-secondary-dark"
+                >
+                  До 01.11.2024
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>History</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1cc446",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112115",
+              "text-light": "#112115",
+              "text-dark": "#f6f8f6",
+              "text-secondary-light": "#6b7280",
+              "text-secondary-dark": "#9ca3af",
+              "chip-bg-light": "#e4f8e9",
+              "chip-bg-dark": "#1a3220",
+              "chip-active-bg-light": "#1cc446",
+              "chip-active-bg-dark": "#1cc446",
+              "chip-active-text-light": "#ffffff",
+              "chip-active-text-dark": "#ffffff",
+              "section-header-text-light": "#059669",
+              "section-header-text-dark": "#34d399",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+      class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden"
+    >
+      <!-- Top App Bar -->
+      <header
+        class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-800"
+      >
+        <div class="flex size-12 shrink-0 items-center justify-start">
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-2xl"
+            >arrow_back</span
+          >
+        </div>
+        <h1
+          class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+        >
+          История операций
+        </h1>
+        <div class="flex w-12 items-center justify-end">
+          <button
+            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:bg-black/5 dark:hover:bg-white/10"
+          >
+            <span
+              class="material-symbols-outlined text-text-light dark:text-text-dark text-2xl"
+              >calendar_month</span
+            >
+          </button>
+        </div>
+      </header>
+      <!-- Chips Filter Bar -->
+      <div
+        class="flex gap-2 p-4 overflow-x-auto whitespace-nowrap scrollbar-hide"
+      >
+        <button
+          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-chip-active-bg-light dark:bg-chip-active-bg-dark px-4 py-1"
+        >
+          <p
+            class="text-chip-active-text-light dark:text-chip-active-text-dark text-sm font-semibold leading-normal"
+          >
+            Все
+          </p>
+        </button>
+        <button
+          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-chip-bg-light dark:bg-chip-bg-dark px-4 py-1"
+        >
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-base"
+            >local_gas_station</span
+          >
+          <p
+            class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+          >
+            Заправки
+          </p>
+        </button>
+        <button
+          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-chip-bg-light dark:bg-chip-bg-dark px-4 py-1"
+        >
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-base"
+            >ev_station</span
+          >
+          <p
+            class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+          >
+            Зарядки
+          </p>
+        </button>
+        <button
+          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-chip-bg-light dark:bg-chip-bg-dark px-4 py-1"
+        >
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-base"
+            >build</span
+          >
+          <p
+            class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+          >
+            Сервис
+          </p>
+        </button>
+        <button
+          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-chip-bg-light dark:bg-chip-bg-dark px-4 py-1"
+        >
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-base"
+            >local_parking</span
+          >
+          <p
+            class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+          >
+            Парковки
+          </p>
+        </button>
+        <button
+          class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-chip-bg-light dark:bg-chip-bg-dark px-4 py-1"
+        >
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-base"
+            >shopping_cart</span
+          >
+          <p
+            class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+          >
+            Покупки
+          </p>
+        </button>
+      </div>
+      <!-- Main Content Feed -->
+      <main class="flex-1 px-4 pb-4">
+        <!-- Date Separator -->
+        <h2
+          class="text-section-header-text-light dark:text-section-header-text-dark text-sm font-bold leading-normal tracking-[0.015em] py-3 text-center"
+        >
+          Сегодня
+        </h2>
+        <!-- List Item: Refueling -->
+        <div
+          class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-[72px] py-2 justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="text-text-light dark:text-text-dark flex items-center justify-center rounded-xl bg-chip-bg-light dark:bg-chip-bg-dark shrink-0 size-12"
+            >
+              <span class="material-symbols-outlined">local_gas_station</span>
+            </div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-base font-semibold leading-normal line-clamp-1"
+              >
+                Заправка АИ-95
+              </p>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2"
+              >
+                АЗС 'Белоруснефть', ул. Ленина, 1
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <p
+              class="text-text-light dark:text-text-dark text-base font-semibold leading-normal"
+            >
+              - 106.44 p.
+            </p>
+          </div>
+        </div>
+        <!-- List Item: Service -->
+        <div
+          class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-[72px] py-2 justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="text-text-light dark:text-text-dark flex items-center justify-center rounded-xl bg-chip-bg-light dark:bg-chip-bg-dark shrink-0 size-12"
+            >
+              <span class="material-symbols-outlined">build</span>
+            </div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-base font-semibold leading-normal line-clamp-1"
+              >
+                Запись на шиномонтаж
+              </p>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2"
+              >
+                СТО 'Автомастер'
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <p
+              class="text-text-light dark:text-text-dark text-base font-semibold leading-normal"
+            >
+              - 136.25 p.
+            </p>
+          </div>
+        </div>
+        <!-- Date Separator -->
+        <h2
+          class="text-section-header-text-light dark:text-section-header-text-dark text-sm font-bold leading-normal tracking-[0.015em] py-3 text-center"
+        >
+          Вчера, 15 сентября
+        </h2>
+        <!-- List Item: Parking -->
+        <div
+          class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-[72px] py-2 justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="text-text-light dark:text-text-dark flex items-center justify-center rounded-xl bg-chip-bg-light dark:bg-chip-bg-dark shrink-0 size-12"
+            >
+              <span class="material-symbols-outlined">local_parking</span>
+            </div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-base font-semibold leading-normal line-clamp-1"
+              >
+                Оплата парковки №1234
+              </p>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2"
+              >
+                Зона 3007, 14:30 - 15:30
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <p
+              class="text-text-light dark:text-text-dark text-base font-semibold leading-normal"
+            >
+              - 6.39 p.
+            </p>
+          </div>
+        </div>
+        <!-- List Item: Purchase -->
+        <div
+          class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-[72px] py-2 justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="text-text-light dark:text-text-dark flex items-center justify-center rounded-xl bg-chip-bg-light dark:bg-chip-bg-dark shrink-0 size-12"
+            >
+              <span class="material-symbols-outlined">shopping_cart</span>
+            </div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-base font-semibold leading-normal line-clamp-1"
+              >
+                Масло моторное
+              </p>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2"
+              >
+                Магазин 'Автозапчасти'
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <p
+              class="text-text-light dark:text-text-dark text-base font-semibold leading-normal"
+            >
+              - 204.37 p.
+            </p>
+          </div>
+        </div>
+        <!-- List Item: EV Charging -->
+        <div
+          class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-[72px] py-2 justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="text-text-light dark:text-text-dark flex items-center justify-center rounded-xl bg-chip-bg-light dark:bg-chip-bg-dark shrink-0 size-12"
+            >
+              <span class="material-symbols-outlined">ev_station</span>
+            </div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-base font-semibold leading-normal line-clamp-1"
+              >
+                Зарядка, 22 кВт⋅ч
+              </p>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2"
+              >
+                ЭЗС 'Malanka', ТЦ 'Мега'
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <p
+              class="text-text-light dark:text-text-dark text-base font-semibold leading-normal"
+            >
+              - 19.16 p.
+            </p>
+          </div>
+        </div>
+        <!-- Date Separator -->
+        <h2
+          class="text-section-header-text-light dark:text-section-header-text-dark text-sm font-bold leading-normal tracking-[0.015em] py-3 text-center"
+        >
+          14 сентября
+        </h2>
+        <!-- List Item: Refund -->
+        <div
+          class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-[72px] py-2 justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="flex items-center justify-center rounded-xl bg-chip-bg-light dark:bg-chip-bg-dark shrink-0 size-12"
+            >
+              <span
+                class="material-symbols-outlined text-green-600 dark:text-green-400"
+                >subdirectory_arrow_left</span
+              >
+            </div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-base font-semibold leading-normal line-clamp-1"
+              >
+                Возврат за парковку
+              </p>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2"
+              >
+                Ошибочная транзакция
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <p
+              class="text-green-600 dark:text-green-400 text-base font-semibold leading-normal"
+            >
+              + 6.39 p.
+            </p>
+          </div>
+        </div>
+        <!-- Empty State Example (commented out) -->
+        <!--
+      <div class="flex flex-col items-center justify-center text-center py-20">
+        <div class="flex items-center justify-center rounded-full bg-chip-bg-light dark:bg-chip-bg-dark size-24 mb-6">
+            <span class="material-symbols-outlined text-text-light dark:text-text-dark text-5xl">history</span>
+        </div>
+        <h3 class="text-text-light dark:text-text-dark text-lg font-bold mb-2">История операций пуста</h3>
+        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm max-w-xs">Здесь будет отображаться история ваших действий. Начните пользоваться сервисами, чтобы увидеть первые записи.</p>
+      </div>
+      --></main>
+    </div>
+  </body>
+</html>

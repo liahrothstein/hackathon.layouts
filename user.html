@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>User</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0A2A5B", // Deep Blue
+              accent: "#FF6B00", // Vibrant Orange
+              "background-light": "#F0F2F5", // Light Gray
+              "background-dark": "#0D1117", // Dark background
+              "card-light": "#FFFFFF",
+              "card-dark": "#161B22",
+              "text-light": "#1D2129", // Near Black
+              "text-dark": "#E6EDF3", // Light Gray for dark mode text
+              "subtext-light": "#65676B",
+              "subtext-dark": "#8B949E",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem", // 8px
+              lg: "0.75rem", // 12px
+              xl: "1rem", // 16px
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+      class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <!-- Top App Bar -->
+      <header
+        class="flex items-center p-4 pb-2 justify-between sticky top-0 z-10 bg-background-light dark:bg-background-dark"
+      >
+        <div class="flex size-10 shrink-0 items-center justify-center">
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark text-3xl"
+            >arrow_back</span
+          >
+        </div>
+        <h1
+          class="text-text-light dark:text-text-dark text-xl font-bold leading-tight tracking-tight flex-1 text-center"
+        >
+          Аккаунт
+        </h1>
+        <div class="flex size-10 shrink-0 items-center justify-center">
+          <!-- Placeholder for another icon like settings -->
+        </div>
+      </header>
+      <main class="flex flex-col gap-6 p-4">
+        <!-- Profile Header -->
+        <section
+          class="flex w-full flex-col gap-4 @container sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-20 w-20 min-w-20"
+              data-alt="User avatar"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAH_dmYBDC9_puaoa1uCVKlAMoMeCLP9aJsfSLrYF0AL4yH3p5NjgKqtlFN8CVa6S15deseJ3y1XYBa3ov6igvXkWYFJxTOlD5WP7c5LZxLl5tHg6iDHdFKqRy53NtPWggxNGtHbRvFabhJFzCqfwQDhn01oRTNEXgWhjjbbBzI59GG1WE91ts6_6ZwWG1Mb4HujdtSg_GIJ1jOJh7LRCRb7hycKbmiM5Rq_1opAcSPMSy49536S3nFBQucTxxYUJjHZwo2Ac6YBbU');
+              "
+            ></div>
+            <div class="flex flex-col justify-center">
+              <p
+                class="text-text-light dark:text-text-dark text-2xl font-bold leading-tight tracking-tight"
+              >
+                Алексей
+              </p>
+              <p
+                class="text-subtext-light dark:text-subtext-dark text-base font-normal leading-normal"
+              >
+                alexey@example.com
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- My Cars Section -->
+        <section class="flex flex-col gap-4">
+          <h2 class="text-text-light dark:text-text-dark text-lg font-bold">
+            Мои автомобили
+          </h2>
+          <div
+            class="flex gap-4 overflow-x-auto pb-2 -mx-4 px-4"
+            style="scrollbar-width: none; -ms-overflow-style: none"
+          >
+            <!-- Car Card 1 -->
+            <div
+              class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark shadow-sm w-64 min-w-64 overflow-hidden"
+              style="justify-content: space-between"
+            >
+              <img
+                src="./assets/camry.png"
+                style="height: 144; max-width: 256px"
+                alt=""
+              />
+              <div class="p-4">
+                <p
+                  class="text-text-light dark:text-text-dark text-base font-bold leading-normal"
+                >
+                  Toyota Camry
+                </p>
+                <p
+                  class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal"
+                >
+                  А 123 БВ 777
+                </p>
+              </div>
+            </div>
+            <!-- Car Card 2 -->
+            <div
+              class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark shadow-sm w-64 min-w-64 overflow-hidden"
+            >
+              <img
+                src="./assets/bmw.webp"
+                style="height: 144; max-width: 256px"
+                alt=""
+              />
+              <div class="p-4">
+                <p
+                  class="text-text-light dark:text-text-dark text-base font-bold leading-normal"
+                >
+                  BMW XM
+                </p>
+                <p
+                  class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal"
+                >
+                  О 456 РС 199
+                </p>
+              </div>
+            </div>
+            <!-- Add Car Card -->
+            <div
+              class="flex flex-col items-center justify-center rounded-xl bg-card-light dark:bg-card-dark shadow-sm w-40 min-w-40 border-2 border-dashed border-gray-300 dark:border-gray-600 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            >
+              <div
+                class="flex size-12 items-center justify-center rounded-full bg-accent/20 text-accent"
+              >
+                <span
+                  class="material-symbols-outlined text-3xl text-text-secondary-light dark:text-text-secondary-dark"
+                  >settings</span
+                >
+              </div>
+              <p class="text-accent text-base font-semibold mt-2">
+                Добавить авто
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Management List -->
+        <section
+          class="flex flex-col gap-px overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-700 shadow-sm"
+        >
+          <!-- Personal Data -->
+          <div
+            class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[72px] py-2 justify-between cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12"
+              >
+                <span class="material-symbols-outlined">person</span>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p
+                  class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1"
+                >
+                  Личные данные
+                </p>
+                <p
+                  class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal line-clamp-2"
+                >
+                  +375 (2*)-***-**-**, a*****@example.com
+                </p>
+              </div>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-subtext-light dark:text-subtext-dark flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+            </div>
+          </div>
+          <!-- Bank Cards -->
+          <div
+            class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[72px] py-2 justify-between cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12"
+              >
+                <span class="material-symbols-outlined">credit_card</span>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p
+                  class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1"
+                >
+                  Банковские карты
+                </p>
+                <p
+                  class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal line-clamp-2"
+                >
+                  Карта VISA •••• 4821
+                </p>
+              </div>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-subtext-light dark:text-subtext-dark flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+            </div>
+          </div>
+          <!-- Fuel Cards -->
+          <div
+            class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[72px] py-2 justify-between cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12"
+              >
+                <span class="material-symbols-outlined">local_gas_station</span>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p
+                  class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1"
+                >
+                  Топливные карты
+                </p>
+                <p
+                  class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal line-clamp-2"
+                >
+                  Нет добавленных карт
+                </p>
+              </div>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-subtext-light dark:text-subtext-dark flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Actions List -->
+        <section
+          class="flex flex-col gap-px overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-700 shadow-sm"
+        >
+          <!-- Activity History -->
+          <div
+            class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[64px] py-2 justify-between cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="text-primary flex items-center justify-center shrink-0 size-10"
+              >
+                <span class="material-symbols-outlined">history</span>
+              </div>
+              <p
+                class="text-text-light dark:text-text-dark text-base font-medium leading-normal"
+              >
+                История операций
+              </p>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-subtext-light dark:text-subtext-dark flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+            </div>
+          </div>
+          <!-- Privacy Settings -->
+          <div
+            class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[64px] py-2 justify-between cursor-pointer"
+          >
+            <div
+              class="flex items-center gap-4"
+              style="gap: 18px; padding-left: 4px"
+            >
+              <img src="./assets/settings.png" style="width: 33px" alt="" />
+              <p
+                class="text-text-light dark:text-text-dark text-base font-medium leading-normal"
+              >
+                Настройки
+              </p>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-subtext-light dark:text-subtext-dark flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+            </div>
+          </div>
+          <!-- Log Out -->
+          <div
+            class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[64px] py-2 justify-between cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="text-red-500 flex items-center justify-center shrink-0 size-10"
+              >
+                <span class="material-symbols-outlined">logout</span>
+              </div>
+              <p class="text-red-500 text-base font-medium leading-normal">
+                Выйти
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

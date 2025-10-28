@@ -140,17 +140,99 @@
             </div>
             <div
               class="col-span-2 flex items-center justify-between gap-4 rounded-2xl bg-accent p-4 text-text-primary-light shadow-sm"
+              style="
+                display: flex;
+                overflow: auto;
+                scrollbar-width: none;
+                background-color: white;
+              "
             >
-              <div class="flex flex-col">
-                <p class="text-lg font-bold">Оплата топлива</p>
-                <p class="text-sm opacity-90">На любой АЗС</p>
+              <div
+                class="group flex h-48 w-full flex-shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 p-4 text-white shadow-lg transition-transform duration-300 active:scale-95"
+              >
+                <div class="flex-1">
+                  <div class="flex items-start justify-between">
+                    <p class="text-lg font-bold leading-tight">
+                      Скидка 15% на топливо
+                    </p>
+                    <span
+                      class="material-symbols-outlined rounded-full bg-white/20 p-1 text-2xl"
+                      >local_gas_station</span
+                    >
+                  </div>
+                  <p class="mt-1 text-sm opacity-90">
+                    На АЗС 'Белоруснефть' до конца месяца
+                  </p>
+                </div>
+                <button
+                  class="w-full rounded-full bg-white/25 py-2.5 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/30 active:bg-white/40"
+                >
+                  Активировать скидку
+                </button>
               </div>
               <div
-                class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-black/10"
+                class="z-10 flex w-full flex-shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 p-4 text-white shadow-lg"
+                style="height: 100%"
               >
-                <span class="material-symbols-outlined text-3xl"
-                  >local_gas_station</span
-                >
+                <div class="flex-1">
+                  <p class="text-sm uppercase tracking-wider opacity-80">
+                    Для вашего Toyota
+                  </p>
+                  <p class="mt-1 text-xl font-bold leading-tight">
+                    Скидка 20% на ТО
+                  </p>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <p class="text-xs opacity-90">Предложение от 'Сервис Плюс'</p>
+                  <div class="flex items-center gap-1">
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30"
+                    >
+                      <span class="material-symbols-outlined text-xl"
+                        >bookmark_add</span
+                      >
+                    </button>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30"
+                    >
+                      <span class="material-symbols-outlined text-xl"
+                        >notification_add</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="height: 100%"
+                class="flex w-full flex-shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 p-4 text-white shadow-lg"
+              >
+                <div class="flex-1">
+                  <p class="text-sm uppercase tracking-wider opacity-80">
+                    Новинка
+                  </p>
+                  <p class="mt-1 text-xl font-bold leading-tight">
+                    Кофе в подарок!
+                  </p>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <p class="text-xs opacity-90">При заправке от 30 литров</p>
+                  <div class="flex items-center gap-1">
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30"
+                    >
+                      <span class="material-symbols-outlined text-xl"
+                        >bookmark_add</span
+                      >
+                    </button>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30"
+                    >
+                      <span class="material-symbols-outlined text-xl"
+                        >notification_add</span
+                      >
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -162,18 +244,6 @@
               <div class="flex flex-col">
                 <p class="text-base font-bold">Техобслуживание</p>
                 <p class="text-sm opacity-90">Запланировано на 25.07</p>
-              </div>
-              <span class="material-symbols-outlined ml-auto text-2xl"
-                >chevron_right</span
-              >
-            </div>
-            <div
-              class="col-span-2 flex items-start gap-4 rounded-2xl bg-purple-500 p-4 text-white shadow-sm"
-            >
-              <span class="material-symbols-outlined mt-1 text-2xl">sell</span>
-              <div class="flex flex-col">
-                <p class="text-base font-bold">Скидка на парковку</p>
-                <p class="text-sm opacity-90">−20% в ТЦ 'Галерея'</p>
               </div>
               <span class="material-symbols-outlined ml-auto text-2xl"
                 >chevron_right</span
@@ -334,7 +404,7 @@
             style="color: #1db954"
           >
             <img style="width: 50px" src="./assets/qr.png" alt="" />
-            <span class="text-xs">Сканировать</span>
+            <span class="text-xs">Оплата по QR</span>
           </a>
           <a
             class="flex flex-col items-center justify-center w-1/4 text-text-secondary-light dark:text-text-secondary-dark"
